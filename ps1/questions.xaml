@@ -1,0 +1,220 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="&lt;questions&gt;"
+        ResizeMode="CanMinimize"
+        SizeToContent="WidthAndHeight"
+        MinWidth="420"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True"
+        FontSize="16">
+    <Window.Resources>
+        <!-- <Style TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Background" Value="#E3DBDB"/>
+            <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="1">
+                            <Border.Background>
+                                <SolidColorBrush
+                                    x:Name="windowButtonBackground"
+                                    Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background.Color}"
+                                    Opacity="0"/>
+                            </Border.Background>
+                            <ContentPresenter RecognizesAccessKey="True" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation  
+                                                Storyboard.TargetName="windowButtonBackground"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="1" Duration="0:0:0.1" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation  
+                                                Storyboard.TargetName="windowButtonBackground"
+                                                Storyboard.TargetProperty="Opacity"
+                                                To="0" Duration="0:0:0.3" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" Value="0.3" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style> -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#000000" />
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Foreground" Value="#AA000000"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="30"
+            ResizeBorderThickness="0"/>
+    </WindowChrome.WindowChrome>
+    <Border Background="#faf8ef"
+            BorderBrush="#000"
+            BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                        <Setter Property="Background" Value="#E3DBDB"/>
+                        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="1">
+                                        <Border.Background>
+                                            <SolidColorBrush
+                                                x:Name="windowButtonBackground"
+                                                Color="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background.Color}"
+                                                Opacity="0"/>
+                                        </Border.Background>
+                                        <ContentPresenter RecognizesAccessKey="True" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation  
+                                                            Storyboard.TargetName="windowButtonBackground"
+                                                            Storyboard.TargetProperty="Opacity"
+                                                            To="1" Duration="0:0:0.1" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard>
+                                                    <Storyboard>
+                                                        <DoubleAnimation  
+                                                            Storyboard.TargetName="windowButtonBackground"
+                                                            Storyboard.TargetProperty="Opacity"
+                                                            To="0" Duration="0:0:0.3" />
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="{Binding Path=Title, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                       FontWeight="500"
+                       Margin="6,3"
+                       Padding="0"
+                       VerticalAlignment="Top"/>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Top"
+                            Grid.Column="1">
+                    <Button Name="windowMinimizeButton" Margin="0,2">
+                        <Canvas Width="22" Height="21">
+                            <Path Fill="#FF000000" StrokeThickness="3.77953" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 3.9884034 9.3419024 V 11.342395 H 17.895857 V 9.3419024 Z"/>
+                        </Canvas>
+                    </Button>
+                    <Button Name="windowCloseButton" IsCancel="True" Background="#FFB380" Margin="2">
+                        <Canvas Width="22" Height="21">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="-0.58344538" Y="-1.7512921"/>
+                            </Canvas.RenderTransform>
+                            <Path Fill="#000" Data="M 13.46 12 19 17.54 V 19 H 17.54 L 12 13.46 6.46 19 H 5 V 17.54 L 10.54 12 5 6.46 V 5 H 6.46 L 12 10.54 17.54 5 H 19 v 1.46 z"/>
+                        </Canvas>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1" Margin="12">
+                <Border BorderBrush="Black"
+                        BorderThickness="1"
+                        CornerRadius="2"
+                        Height="34">
+                    <ComboBox Name="cmbXmlFile"
+                              BorderThickness="0"
+                              Padding="4,3"
+                              SelectedIndex="0">
+                        <ComboBox.Resources>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="Foreground" Value="#000000" />
+                                <Style.Triggers>
+                                    <Trigger Property="SelectedIndex" Value="0">
+                                        <Setter Property="Foreground" Value="#AA000000" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                            <Style TargetType="{x:Type ComboBoxItem}">
+                                <Setter Property="Foreground" Value="#000000" />
+                            </Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="2" />
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBoxItem Name="iXmlFilePlaceholder" Height="0" Content="select questions xml …" />
+                    </ComboBox>
+                </Border>
+                <StackPanel Orientation="Horizontal" Margin="1,13,0,0">
+                    <TextBlock Name="modeText" Text="mode:" IsEnabled="False" Margin="0,0,10,0" />
+                    <RadioButton Name="optXmlToHtml" IsEnabled="False" Margin="0,1,0,0" GroupName="grpMode" VerticalContentAlignment="Center">
+                        <TextBlock Name="xmlToHtmlText" Text="xml to html" VerticalAlignment="Center" Margin="0,0,0,3" />
+                    </RadioButton>
+                    <RadioButton Name="optPrepareTranslation" IsEnabled="False" Margin="10,1,0,0" GroupName="grpMode" VerticalContentAlignment="Center">
+                        <TextBlock Name="prepareTranslationText" Text="prepare translation" VerticalAlignment="Center" Margin="0,0,0,3" />
+                    </RadioButton>
+                </StackPanel>
+                <Separator Name="sepOtions" Margin="0,12,0,0" Visibility="Collapsed"/>
+                <StackPanel Name="stkXmlToHtmlOptions" Margin="12,12,0,0" Visibility="Collapsed">
+                    <CheckBox Name="cbxRenumberQuestions" ToolTip="don’t sort by @nr, renumber" VerticalContentAlignment="Center">
+                        <TextBlock Name="renumberQuestionsText" Text="renumber questions" VerticalAlignment="Center" Margin="0,0,0,3" />
+                    </CheckBox>
+                    <CheckBox Name="cbxRandomizeQuestionsOrder" ToolTip="randomly sort questions (if randomizable)" VerticalContentAlignment="Center">
+                        <TextBlock Name="randomizeQuestionsOrderText" Text="randomize questions order" VerticalAlignment="Center" Margin="0,0,0,3" />
+                    </CheckBox>
+                    <CheckBox Name="cbxRandomizeMultipleChoiceOptionsOrder" ToolTip="randomly sort multiple choice options (where randomizable)" VerticalContentAlignment="Center">
+                        <TextBlock Name="randomizeMultipleChoiceOptionsOrderText" Text="randomize multiple choice options order" VerticalAlignment="Center" Margin="0,0,0,3" />
+                    </CheckBox>
+                </StackPanel>
+                <StackPanel Name="stkOutput" Visibility="Collapsed">
+                    <TextBlock Name="outputFileNameText" Text="output file name" Margin="1,14,0,3" />
+                    <TextBox Name="tbxOutputFileName" Padding="2,3,2,4" />
+                    <Button Name="btnGenerate" Content="generate" Margin="0,19,0,12" Padding="12,3,12,4" HorizontalAlignment="Left">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="2"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+
+</Window>

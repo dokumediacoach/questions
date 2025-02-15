@@ -1,0 +1,25 @@
+# ignore VisualStudioCode folder
+.vscode/
+
+# ignore eclipse project description file
+.project
+
+# ignore OS-generated
+Thumbs.db
+
+# ignore things to keep but not to track
+tryout/
+
+# ignore all xml in root except questions-demo.xml
+/*.xml
+!/questions-demo.xml
+
+# ignore all html in root except questions-demo.html
+/*.html
+!/questions-demo.html
+
+# ignore everything in img folder …
+img/*
+# … except for subfolder 'demo' and its contents
+!img/demo/
+!img/demo/**

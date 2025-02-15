@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+
+    <xs:element name="strings" type="stringsType">
+        <xs:key name="stringID">
+            <xs:selector xpath="string"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+    </xs:element>
+
+    <xs:complexType name="stringsType">
+        <xs:sequence>
+            <xs:element name="string" type="stringType" maxOccurs="unbounded">
+                <xs:key name="langXmlLang">
+                    <xs:selector xpath="lang"/>
+                    <xs:field xpath="@xml:lang"/>
+                </xs:key>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="stringType">
+        <xs:sequence>
+            <xs:element name="lang" type="langType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="langType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

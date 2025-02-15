@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions topic="Questions Training Demo"
+           language="de|en"
+           xml:lang="en"
+           xsi:noNamespaceSchemaLocation="xsd/questions.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <question nr="1">
+        <intro>
+            Maybe you know this situation?<br />
+            In the middle of this exam preparation, someone convinced you to play around with that
+            suspicious internet again and you found some useful exercise questions, but
+            they look really awful.
+        </intro>
+        <multiple-choice>
+            <option>Sorry, I don't. What was your name again?</option>
+            <option>I've seen an app for this.</option>
+            <option correct="true">Yes, and that really got on my nerves.</option>
+            <option>What is this supposed to be? An interrogation???</option>
+        </multiple-choice>
+    </question>
+
+    <question nr="1" xml:lang="de">
+        <intro>
+            Kennen Sie diese Situation?<br />
+            Mitten in der Prüfungsvorbereitung hat Sie jemand überredet, dafür erneut mit diesem
+            verdächtigen Internet herumzuspielen, und Sie haben einige wirklich nützliche Übungsfragen gefunden, aber
+            die sehen wirklich furchtbar aus.
+        </intro>
+        <multiple-choice>
+            <option>Kenn ich nicht. Wie war nochmal Dein Name?</option>
+            <option>Da hab ich mal ne App für gesehen.</option>
+            <option correct="true">Ja, und das ist mir echt auf den Keks gegangen.</option>
+            <option>Was soll das hier sein? Ein Verhör???</option>
+        </multiple-choice>
+    </question>
+
+
+    <question nr="2">
+        <intro>
+            <p>Perhaps it has even come to the point with you as it did with me?</p>
+            <p>That forced you felt to invent such quiz show with such questions …</p>
+            <p>
+                … and then somehow tried to push this brain groats inside a word processing program
+                that could never overcome its 1980s roots?
+            </p>
+        </intro>
+        <multiple-choice>
+            <option>No, but sounds bad.</option>
+            <option correct="true">Yes, and that's what really got on my nerves!</option>
+            <option>What should we do? We don't have nothing else.</option>
+            <option>We used to solve this with word snippets, a Pritt stick and a photocopier.</option>
+        </multiple-choice>
+    </question>
+    
+    <question nr="2" xml:lang="de">
+        <intro>
+            <p>Vielleicht ist es mit Ihnen gar soweit gekommen wie dies bei mir geschah?</p>
+            <p>Dass genötigt man sich fühlte, derlei Quizshow zu erfinden mit solcherlei Fragen …</p>
+            <p>
+                … und versuchte die Hirngrütze dann irgendwie in einem Textverarbeitungsprogramm,
+                das seine 1980er Jahre Wurzeln niemals überwinden konnte, zurechtzuschieben?
+            </p>
+        </intro>
+        <multiple-choice>
+            <option>Nein, aber klingt schlimm.</option>
+            <option correct="true">Ja, und das ist mir erst so richtig auf den Keks gegangen!</option>
+            <option>Was sollen wir machen? Wir haben doch nichts anderes.</option>
+            <option>Früher haben wir das mit Wortschnipseln, Prittstift und Fotokopierer gelöst.</option>
+        </multiple-choice>
+    </question>
+
+    
+    <question nr="3">
+        <intro>
+            <h>Visualization</h>
+            <p>
+                In any case, I've thought of something that could be done.
+            </p>
+        </intro>
+        <visualization>
+            <task>
+                <p>
+                    I am convinced that authoring XML files with a concise, semantic structure in
+                    an XML editor with XML Schema support can bring joy and extend life.
+                    That's why I couldn't help but start developing a toolset that can
+                    primarily be used to create multiple-choice questions.
+                </p>
+                <p>
+                    I wanted a solution for visualizing multiple-choice questions and their evaluation for
+                    development and training purposes.
+                </p>
+            </task>
+            <solution>
+                <p>
+                    Because I found a solution that somehow works pretty well for me, I decided
+                    to publish the small toolset &lt;questions&gt; …
+                </p>
+                <p>
+                    … and that free of charge,<br/>
+                    just like out of boredom.
+                </p>
+                <p>Try out &lt;questions&gt; today!</p>
+            </solution>
+        </visualization>
+    </question>
+    
+    <question nr="3" xml:lang="de">
+        <intro>
+            <h>Visualisierung</h>
+            <p>
+                Ich habe mir da jedenfalls was ausgedacht, was
+                man da machen könnte.
+            </p>
+        </intro>
+        <visualization>
+            <task>
+                <p>
+                    Ich bin überzeugt, dass das Authoring von XML-Dateien mit knapper, semantischer Struktur in
+                    einem XML-Editor mit XML-Schema-Unterstützung Freude bringen und das Leben verlängern kann.
+                    Deshalb konnte ich nicht anders, als mit der Entwicklung eines Toolsets zu beginnen, mit dem
+                    primär Multiple-Choice-Fragen erstellt werden können.
+                </p>
+                <p>
+                    Ich wollte eine Lösung für das Visualisieren von Multiple-Choice-Fragen und ihrer Bewertung zu
+                    Entwicklungs- und Trainingszwecken.
+                </p>
+            </task>
+            <solution>
+                <p>
+                    Weil ich eine Lösung gefunden habe, die für mich irgendwie ziemlich gut funktioniert, habe ich mich
+                    entschieden, das kleine &lt;questions&gt; Toolset zu veröffentlichen …
+                </p>
+                <p>
+                    … und zwar kostenlos<br/>
+                    einfach so aus Langeweile.
+                </p>
+                <p>Probiere &lt;questions&gt; heute noch aus!</p>
+            </solution>
+        </visualization>
+    </question>
+
+
+    <question nr="4">
+        <intro>
+            What do you think about that?
+        </intro>
+        <multiple-choice>
+            <option>That really sounds too good to be true. You're trying to rip me off or something.</option>
+            <option>I'm convinced. How may I pay you for your great performance?</option>
+            <option correct="true">I just want to see more examples.</option>
+        </multiple-choice>
+    </question>
+
+    <question nr="4" xml:lang="de">
+        <intro>
+            Wie finden Sie das?
+        </intro>
+        <multiple-choice>
+            <option>Das klingt wirklich zu schön, um wahr zu sein. Du versuchst, mich abzuzocken oder sowas.</option>
+            <option>Ich bin überzeugt. Wie kann ich dich für deine großartige Leistung bezahlen?</option>
+            <option correct="true">Ich möchte nur weitere Beispiele sehen.</option>
+        </multiple-choice>
+    </question>
+
+
+    <question nr="5">
+        <intro>
+            You can keep the texts you capture very simple.
+            Maybe just insert a <code>&lt;br/&gt;</code> tag at the end line.<br/>
+            Otherwise there is no line break in the output.
+            <p>
+                But you can also give the whole thing more structure and achieve
+                amazing effects. ASCII Art …
+            </p>
+            <codeblock><![CDATA[
+                . ---------------------.
+                | really cancel?       |
+                |                      |
+                | [ ok ] [ cancel ]    |
+                `----------------------'
+            ]]></codeblock>
+            <p>
+                … stunning <em>inline</em> <strong>formatting</strong> opportunities.<br />
+                Astonishing color images …
+            </p>
+            <img src="img/demo/edgar-nKC772R_qog-unsplash.jpg" />
+            <codeblock><![CDATA[
+                Photo by <a href="https://unsplash.com/@e_d_g_a_r">Edgar</a>
+                on <a href="https://unsplash.com/photos/brown-tabby-kitten-sitting-on-floor-nKC772R_qog">Unsplash</a>
+            ]]></codeblock>
+            <p>You can also add lists.</p>
+            <ul>
+                <li>This is very close to HTML.</li>
+                <li>But also very limited (it's a feature).</li>
+                <li>Those questions should be readable and understandable.</li>
+            </ul>
+            <p>What else could you wish for?</p>
+            <h>Maybe subheadings</h>
+            <ol>
+                <li>Numbered lists also.</li>
+                <li>But you should really try to keep these example questions shorter.</li>
+                <li>Those questions should be readable and understandable.</li>
+            </ol>
+            <p>This sure has been a lot of structured information.</p>
+            <p>Have you really read all the way down here?</p>
+        </intro>
+        <multiple-choice>
+            <option correct="true">Yes, I am an accomplished reader.</option>
+        </multiple-choice>
+    </question>
+
+    <question nr="5" xml:lang="de">
+        <intro>
+            Du kannst die Texte, die du erfasst, sehr einfach halten.
+            Vielleicht nur mal ein <code>&lt;br/&gt;</code>-Tag am Zeilenende einfügen.<br/>
+            Sonst gibt es keinen Zeilenumbruch im Output.
+            <p>
+                Du kannst das Ganze aber auch mit mehr Struktur versehen und verblüffende
+                Effekte erzielen. ASCII Art …
+            </p>
+            <codeblock><![CDATA[
+                . ----------------------.
+                | wirklich abbrechen?   |
+                |                       |
+                | [ ok ] [ abbrechen ]  |
+                `-----------------------'
+            ]]></codeblock>
+            <p>
+                … atemberaubende <em>Inline-</em><strong>Formatierungs-</strong>Möglichkeiten.<br />
+                Erstaunliche Farbbilder …
+            </p>
+            <img src="img/demo/edgar-nKC772R_qog-unsplash.jpg" />
+            <codeblock><![CDATA[
+                Photo by <a href="https://unsplash.com/@e_d_g_a_r">Edgar</a>
+                on <a href="https://unsplash.com/photos/brown-tabby-kitten-sitting-on-floor-nKC772R_qog">Unsplash</a>
+            ]]></codeblock>
+            <p>Du kannst auch Listen hinzufügen.</p>
+            <ul>
+                <li>Dies ist sehr nah an HTML.</li>
+                <li>Aber auch sehr eingeschränkt (das ist ein Feature).</li>
+                <li>Diese Fragen sollten lesbar und verständlich sein.</li>
+            </ul>
+            <p>Was könnte man sich sonst noch wünschen?</p>
+            <h>Vielleicht Zwischenüberschriften</h>
+            <ol>
+                <li>Auch nummerierte Listen.</li>
+                <li>Aber du solltest wirklich versuchen, diese Beispielfragen kürzer zu halten.</li>
+                <li>Diese Fragen sollten lesbar und verständlich sein.</li>
+            </ol>
+            <p>Das war jetzt wirklich eine Menge strukturierter Informationen.</p>
+            <p>Hast du das wirklich bis hier ganz unten durchgelesen?</p>
+        </intro>
+        <multiple-choice>
+            <option correct="true">Ja, ich bin ein versierter Leser.</option>
+        </multiple-choice>
+    </question>
+
+
+    <question nr="6">
+        <intro>
+            <p>So, what does all this have to do with you?</p>
+            <p><uppercase>How can you get involved right now?</uppercase></p>
+        </intro>
+        <multiple-choice>
+            <option correct="true">Download this Questions Training Demo.</option>
+            <option correct="true">Unzip the ZIP file into a local directory of your choice.</option>
+            <option correct="true">Open the <code>questions</code> folder in your prefered text editor.</option>
+            <option correct="true">Discover the possibilies.</option>
+        </multiple-choice>
+    </question>
+
+    <question nr="6" xml:lang="de">
+        <intro>
+            <p>So, aber was hat das Ganze jetzt mit Ihnen zu tun?</p>
+            <p><uppercase>Wie kannst du da jetzt mitmachen?</uppercase></p>
+        </intro>
+        <multiple-choice>
+            <option correct="true">Lade dieses Questions Training Demo herunter.</option>
+            <option correct="true">Entpacke die ZIP-Datei in ein lokales Verzeichnis deiner Wahl.</option>
+            <option correct="true">Öffne das <code>questions</code>-Verzeichnis in deinem bevorzugten Texteditor.</option>
+            <option correct="true">Entdecke die Möglichkeiten.</option>
+        </multiple-choice>
+    </question>
+
+
+    <question nr="7">
+        <intro>
+            <p>Just open the file <code>questions-demo.xml</code> in a text editor of your choice.</p>
+            <p>The beginning of the file will look something like this:</p>
+            <codeblock><![CDATA[
+                <?xml version="1.0" encoding="UTF-8"?>
+                <questions topic="Questions Training Demo"
+                           language="de|en"
+                           xml:lang="en"
+                           xsi:noNamespaceSchemaLocation="xsd/questions.xsd"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+                    <question nr="1">
+                        <intro>
+                            Maybe you know this situation?<br />
+                            In the middle of this exam preparation, someone convinced you to play around with that
+                            suspicious internet again and you found some useful exercise questions, but
+                            they look really awful.
+                        </intro>
+                        <multiple-choice>
+                            <option>Sorry, I don't. What was your name again?</option>
+                            <option>I've seen an app for this.</option>
+                            <option correct="true">Yes, and that really got on my nerves.</option>
+                            <option>What is this supposed to be? An interrogation???</option>
+                        </multiple-choice>
+                    </question>
+
+                    ...
+            ]]></codeblock>
+            <p>Yes, it sure is beautiful.</p>
+            <ul>
+                <li>The XML file <code>questions-demo.xml</code> is the source of structured content for this Questions Training Demo.</li>
+                <li>The HTML file <code>questions-demo.html</code> is the one you open in the browser.</li>
+                <li>The other files are for converting the XML to HTML and for the result to look and function nice.</li>
+            </ul>
+        </intro>
+        <visualization>
+            <task>Where does all this come from? Where can you find out more about it?</task>
+            <solution>
+                <p>I have published it on GitHub:</p>
+                <codeblock>https://github.com/dokumediacoach/questions</codeblock>
+                <p>Kind regards<br />Matthias</p>
+            </solution>
+        </visualization>
+    </question>
+    
+    <question nr="7" xml:lang="de">
+        <intro>
+            <p>Öffne die Datei <code>questions-demo.xml</code> in einem Texteditor deiner Wahl.</p>
+            <p>Der Anfang der Datei wird in etwa so aussehen:</p>
+            <codeblock><![CDATA[
+                <?xml version="1.0" encoding="UTF-8"?>
+                <questions topic="Questions Training Demo"
+                           language="de|en"
+                           xml:lang="en"
+                           xsi:noNamespaceSchemaLocation="xsd/questions.xsd"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+                    <question nr="1">
+                        <intro>
+                            Maybe you know this situation?<br />
+                            In the middle of this exam preparation, someone convinced you to play around with that
+                            suspicious internet again and you found some useful exercise questions, but
+                            they look really awful.
+                        </intro>
+                        <multiple-choice>
+                            <option>Sorry, I don't. What was your name again?</option>
+                            <option>I've seen an app for this.</option>
+                            <option correct="true">Yes, and that really got on my nerves.</option>
+                            <option>What is this supposed to be? An interrogation???</option>
+                        </multiple-choice>
+                    </question>
+
+                    ...
+            ]]></codeblock>
+            <p>Ja, die Datei ist wirklich schön.</p>
+            <ul>
+                <li>Die XML-Datei <code>questions-demo.xml</code> ist die Quelle des strukturierten Inhalts für dieses Questions Training Demo.</li>
+                <li>Die HTML-Datei <code>questions-demo.html</code> ist diejenige, die du im Browser öffnest.</li>
+                <li>Die anderen Dateien dienen dazu, das XML in HTML umzuwandeln und dafür zu sorgen, dass das Ergebnis gut aussieht und funktioniert.</li>
+            </ul>
+        </intro>
+        <visualization>
+            <task>Woher kommt das alles? Wo kann man mehr darüber erfahren?</task>
+            <solution>
+                <p>Ich habe es auf GitHub veröffentlicht:</p>
+                <codeblock>https://github.com/dokumediacoach/questions</codeblock>
+                <p>Freundliche Grüße<br />Matthias</p>
+            </solution>
+        </visualization>
+    </question>
+
+</questions>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings xsi:noNamespaceSchemaLocation="../xsd/strings.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <string id="questionHeading">
+        <lang xml:lang="en">Question</lang>
+        <lang xml:lang="de">Frage</lang>
+    </string>
+
+    <string id="solutionHeading">
+        <lang xml:lang="en">Solution</lang>
+        <lang xml:lang="de">Lösung</lang>
+    </string>
+
+    <string id="showSolutionButton">
+        <lang xml:lang="en">Show solution</lang>
+        <lang xml:lang="de">Lösung anzeigen</lang>
+    </string>
+
+    <string id="hideSolutionButton">
+        <lang xml:lang="en">Hide solution</lang>
+        <lang xml:lang="de">Lösung verbergen</lang>
+    </string>
+
+    <string id="answerEvaluationButton">
+        <lang xml:lang="en">Evaluate question</lang>
+        <lang xml:lang="de">Antwort bewerten</lang>
+    </string>
+
+    <string id="correctAnswer">
+        <lang xml:lang="en">correct answer</lang>
+        <lang xml:lang="de">richtige Antwort</lang>
+    </string>
+
+    <string id="wrongAnswer">
+        <lang xml:lang="en">wrong answer</lang>
+        <lang xml:lang="de">falsche Antwort</lang>
+    </string>
+
+    <string id="evaluationCounterLabel">
+        <lang xml:lang="en">correctly answered:</lang>
+        <lang xml:lang="de">richtig beantwortet:</lang>
+    </string>
+
+    <string id="totalEvaluationHeading">
+        <lang xml:lang="en">Total Evaluation</lang>
+        <lang xml:lang="de">Gesamtauswertung</lang>
+    </string>
+
+    <string id="correctAnswersCountLabel">
+        <lang xml:lang="en">Correctly answered multiple choice questions:</lang>
+        <lang xml:lang="de">Richtig beantwortete Multiple-Choice-Fragen:</lang>
+    </string>
+
+    <string id="answeredCountLabel">
+        <lang xml:lang="en">Number of answered multiple choice questions:</lang>
+        <lang xml:lang="de">Anzahl beantworteter Multiple-Choice-Fragen:</lang>
+    </string>
+
+    <string id="numberOfQuestionsLabel">
+        <lang xml:lang="en">Number of all multiple choice questions:</lang>
+        <lang xml:lang="de">Anzahl aller Multiple-Choice-Fragen:</lang>
+    </string>
+
+    <string id="correctAnswersPercentLabel">
+        <lang xml:lang="en">Percent correct (of answered):</lang>
+        <lang xml:lang="de">Prozent richtig (von beantworteten):</lang>
+    </string>
+
+    <string id="correctAnswersTotalPercentLabel">
+        <lang xml:lang="en">Percent correct (of all):</lang>
+        <lang xml:lang="de">Prozent richtig (von allen):</lang>
+    </string>
+
+</strings>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+
+    <xs:element name="questions" type="questionsType">
+        <xs:unique name="nrLang">
+            <xs:selector xpath="question"/>
+            <xs:field xpath="@nr"/>
+            <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+        <xs:unique name="guidLang">
+            <xs:selector xpath="question"/>
+            <xs:field xpath="@guid"/>
+            <xs:field xpath="@xml:lang"/>
+        </xs:unique>
+    </xs:element>
+
+    <xs:complexType name="questionsType">
+        <xs:sequence>
+            <xs:element name="question" type="questionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="topic" type="xs:string" use="required"/>
+        <xs:attribute name="language" type="languageType"/>
+        <xs:attribute ref="xml:lang" default="en"/>
+        <xs:attribute name="category" type="xs:string"/>
+        <xs:attribute name="questions-order-randomizable" type="trueOrFalseType" default="false"/>
+        <xs:attribute name="multiple-choice-options-order-randomizable" type="trueOrFalseType" default="false"/>
+    </xs:complexType>
+
+    <xs:simpleType name="languageType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z]{2}(\|[a-z]{2})*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="questionType">
+        <xs:sequence>
+            <xs:element name="intro" type="inlineAndBlockType"/>
+            <xs:choice>
+                <xs:element name="visualization" type="visualizationType"/>
+                <xs:element name="multiple-choice" type="multiple-choiceType"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="nr" type="xs:positiveInteger"/>
+        <xs:attribute name="guid" type="guidType"/>
+        <xs:attribute ref="xml:lang"/>
+        <xs:attribute name="category" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:simpleType name="guidType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="visualizationType">
+        <xs:sequence>
+            <xs:element name="task" type="inlineAndBlockType"/>
+            <xs:element name="solution" type="inlineAndBlockType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="multiple-choiceType">
+        <xs:sequence>
+            <xs:element name="option" type="inlineType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="options-order-randomizable" type="trueOrFalseType"/>
+    </xs:complexType>
+
+    <xs:complexType name="inlineAndBlockType" mixed="true">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="br" type="emptyType"/>
+            <xs:element name="em" type="xs:string"/>
+            <xs:element name="strong" type="xs:string"/>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="uppercase" type="xs:string"/>
+            <xs:element name="h" type="xs:string"/>
+            <xs:element name="p" type="inlineType"/>
+            <xs:element name="codeblock" type="codeblockType"/>
+            <xs:element name="img" type="imgType"/>
+            <xs:element name="ul" type="listType"/>
+            <xs:element name="ol" type="listType"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="inlineType" mixed="true">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="br" type="emptyType"/>
+            <xs:element name="em" type="xs:string"/>
+            <xs:element name="strong" type="xs:string"/>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="uppercase" type="xs:string"/>
+        </xs:choice>
+        
+        <xs:attribute name="correct" type="trueOrFalseType" default="false" />
+    </xs:complexType>
+    
+    <xs:simpleType name="trueOrFalseType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="emptyType">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="codeblockType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:space" default="preserve"/>
+                <xs:attribute name="trim" type="trueOrFalseType" default="true"/>
+                <xs:attribute name="strip-indent" type="trueOrFalseType" default="true"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="imgType">
+        <xs:attribute name="src" use="required"/>
+        <xs:attribute name="alt"/>
+        <xs:attribute name="title"/>
+        <xs:attribute name="width" type="imgWidthType"/>
+    </xs:complexType>
+
+    <xs:simpleType name="imgWidthType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{0,2}(rem|em|px|%)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="listType">
+        <xs:sequence>
+            <xs:element name="li" type="inlineType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
