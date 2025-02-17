@@ -1,4 +1,12 @@
-﻿Add-Type -AssemblyName PresentationCore,PresentationFramework,WindowsBase,System.Windows.Forms
+﻿<#
+    .SYNOPSIS
+    This script shows a GUI from which you can process questions xml files.
+
+    .DESCRIPTION
+    Within the displayed GUI you can select the modes 'xml to html' or 'prepare translation'
+    helping you to develop and to transform your questions xml.
+#>
+Add-Type -AssemblyName PresentationCore,PresentationFramework,WindowsBase,System.Windows.Forms
 
 Import-Module $PSScriptRoot\psm1\questions-xml.psm1
 

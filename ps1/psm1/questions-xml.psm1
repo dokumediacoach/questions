@@ -1,3 +1,21 @@
+<#
+    .SYNOPSIS
+    This script module contains the necessary funtions to process questions xml files.
+
+    .DESCRIPTION
+    With the functions in this script module you can get (load), test, convert and save questions xml.
+    The functions throw on error. Information is written to console.
+    
+    .EXAMPLE
+    The module and its functions are consumed by the ps1\questions.ps1 script that shows a gui for user interaction.
+    It would also be possible to write scripts like the following (for a simple transformation of questions xml to html e.g.):
+
+    Import-Module $PSScriptRoot\psm1\questions-xml.psm1
+    $xml = Get-QuestionsXml -FilePath "$questionsRoot\my-questions.xml"
+    Test-QuestionsXml -Xml $xml
+    Set-QuestionsXmlForPublication -Xml $xml
+    Convert-QuestionsXmlToHtml -Xml $xml -TargetPath "$questionsRoot\my-questions.html"
+#>
 $questionsRoot = Split-Path -Path $MyInvocation.PSScriptRoot -Parent
 $xsdPath = "$questionsRoot\xsd\questions.xsd"
 $questionsToHtmlXsltPath = "$questionsRoot\xsl\questions-to-html.xsl"
@@ -216,7 +234,7 @@ function Test-QuestionsXml {
             Defaults to /questions/@language or /questions/@xml:lang
 
         .PARAMETER Mode
-            Mode of testing is different in (default) Mode 'PrepareTranslation' from that in Mode 'Publication'.
+            Mode of testing is different in Mode 'PrepareTranslation' from that in (default) Mode 'Publication'.
             During translation preparation missing questions languages are created (as copy of default questions languages).
             During publication (xml-to-html) missing questions languages are erroneous.
 
